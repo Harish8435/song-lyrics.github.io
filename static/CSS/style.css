@@ -52,6 +52,72 @@ button {
     color: white;
 }
 
+button:hover {
+    transform: scale(0.96);
+}
+
+.result {
+    color: white;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.songs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.songs-list li {
+    margin-bottom: 2rem;
+    width: 684px;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.songs-list li::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    bottom: -4px;
+    height: 3px;
+    background: #2d77be;
+    display: inline-block;
+}
+
+.songs-list li div {
+    float: left;
+}
+
+.songs-list li span {
+    float: right;
+    background-color: palevioletred;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px 10px;
+    text-transform: capitalize;
+}
+
+.songs-list li span:hover {
+    transform: scale(0.96);
+}
+
+/* Mobile view */
+
 @media screen and (max-width: 800px) {
     #form {
         width: 96%;
@@ -68,68 +134,16 @@ button {
         margin-top: 1rem;
         background-color: #112651;
     }
-}
 
-button:hover {
-    transform: scale(0.96);
-}
+    .songs-list li {
+        width: 74vw;
+    }
 
-.result{
-    color: white;
-    text-align: center;
-    font-family: 'Philosopher', sans-serif;
-    margin-top: 2rem;
-    position: relative;
-}
+    .songs-list li div {
+        float: unset;
+    }
 
-.songs-list{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-
-.songs-list li{
-    margin-bottom: 2rem;
-    width: 684px;
-    justify-content: space-evenly;
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 1.6rem;
-    text-decoration: none;
-    position: relative;
-}
-
-.songs-list li::after{
-    content: "";
-    position: absolute;
-    right: -20px;
-    left: -20px;
-    bottom: -4px;
-    height: 3px;
-    background: #2d77be;
-    display: inline-block;
-}
-
-.songs-list li div{
-    float: left;
-}
-
-.songs-list li span{
-    float: right;
-    background-color: palevioletred;
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 12px;
-    color: white;
-    cursor: pointer;
-    font-weight: 400;
-    padding: 4px 10px;
-    text-transform: capitalize;
-}
-
-.songs-list li span:hover {
-    transform: scale(0.96);
+    .songs-list li span {
+        float: unset;
+    }
 }
