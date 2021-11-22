@@ -40,7 +40,7 @@ header {
     outline: none;
 }
 
-button {
+.searchBtn {
     background-color: #2d77be;
     padding: 0.4rem 2rem;
     border-radius: 2rem;
@@ -52,7 +52,7 @@ button {
     color: white;
 }
 
-button:hover {
+.searchBtn:hover {
     transform: scale(0.96);
 }
 
@@ -129,7 +129,7 @@ button:hover {
         min-width: 96%;
     }
 
-    button {
+    .searchBtn {
         position: unset;
         margin-top: 1rem;
         background-color: #112651;
