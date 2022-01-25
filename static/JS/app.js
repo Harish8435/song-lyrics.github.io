@@ -20,6 +20,7 @@ async function searchSong(searchValue) {
     const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`)
     console.log(searchResult);
     const data = await searchResult.json();
+    console.log(data);
 
     showData(data)
 }
